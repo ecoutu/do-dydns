@@ -1,7 +1,7 @@
 # do-dydns
 DigitalOcean DyDns (Dynamic DNS)
 
-I created this as a quick and dirty means to tracking the ip addresses of relatives whom I provide computer support to. Signing up for Dynamic DNS providers isn't as simple/free as it used to be, so I figured if I already had a domain hosted on my DigitalOcean account, why not build my own DyDns using the API. I stick this as a cron job on their boxes, and now I have `mom.example.com` and `bro1.example.com`.
+I created this as a quick and dirty means to tracking the ip addresses of relatives whom I provide computer support to. Signing up for Dynamic DNS providers isn't as simple/free as it used to be, so I figured if I already had a domain hosted on my DigitalOcean account, why not roll my own DyDns using the API. I stick this as a cron job on people's boxes, and now I have `mom.example.com` and `bro1.example.com`.
 
 ## Running
 
@@ -28,13 +28,13 @@ optional arguments:
 
 ## Example
 
-If you own example.com, and want example.com to point at your ip address:
+If you own `example.com`, and want `example.com` to point at your ip address:
 
 ```
 python do-dydns.py -a 'DIGITAL_OCEAN_API_V2_KEY_HERE' -d 'example.com' -r '@'
 ```
 
-If you would prefer to use the subdomain home.example.com:
+If you would prefer to use the subdomain `home.example.com`:
 
 ```
 python do-dydns.py -a 'DIGITAL_OCEAN_API_V2_KEY_HERE' -d 'example.com' -r 'home'
