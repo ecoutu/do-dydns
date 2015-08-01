@@ -32,7 +32,7 @@ def do_dydns(api_key, domain_name, record_name):
     records = [
         r for r
         in do_request(api_key, 'get', '/domains/%s/records/' % (domain_name, ), {})['domain_records']
-        if r['name'] == record_name
+        if r['name'] == record_name and r['type'] == 'A'
     ]
 
     if records:
